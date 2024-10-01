@@ -87,19 +87,3 @@ app.listen(5001, () => {
 //   console.log(req.params);
 // })
 
-// app.post('/update-user', async(req, res)=>{
-//   const {name, email, mobile, image, username} =req.body;
-//   try{
-//     await User.updateOne(
-//       {email:email},
-//       {
-//         $set:{
-//           mobile, image, username
-//         },
-//       }
-//     );
-//     res.send({status:'Ok', data:"Updated"})
-//   }catch(error){
-//     return res.send({error: error});
-//   }
-// });
