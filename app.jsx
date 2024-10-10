@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const paymentRoutes = require('./paymentRoute.jsx');
 const Payment = require('./Payment.jsx');
+const Donation = require('./Donation.jsx');
 
 // Middleware
 app.use(cors());
