@@ -1,18 +1,11 @@
 const mongoose = require("mongoose");
 
-const UserDetailSchema= new mongoose.Schema(
-    {
-        name: String,
-        email:{
-            type: String,
-            unique: true
-        },
-        password: String,
-        image: String,
-        username: String
-    },
-    {
-        collection: "UserInfo",
-    }
-);
-mongoose.model("UserInfo", UserDetailSchema);
+const userSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true }, // Added for login
+   // Optional field for additional image data
+}, { collection: 'UserInfo' });
+
+module.exports = mongoose.model("UserInfo", userSchema);

@@ -6,6 +6,6 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     mobile: { type: String, required: true },
     profileImage: { type: String } // Field to store the image path
-}, { collection: 'userinfos' }); // Change collection name to 'userinfos'
+}, { collection: 'User_profile' }); // Change collection name to 'userinfos'
 
-module.exports = mongoose.model("UserInfo", userSchema);
+module.exports = mongoose.model("User_profile", userSchema);
